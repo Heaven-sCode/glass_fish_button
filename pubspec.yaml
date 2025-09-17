@@ -1,7 +1,9 @@
 name: glass_fish_button
 description: >-
   A glassmorphism-inspired Flutter button widget with switchable light and dark themes.
-version: 0.1.1
+version: 0.1.2
+homepage: https://github.com/Heaven-sCode/glass_fish_button/wiki
+repository: https://github.com/Heaven-sCode/glass_fish_button.git
 #publish_to: 'pub.dev'
 
 environment:

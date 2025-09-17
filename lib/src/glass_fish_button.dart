@@ -181,14 +181,15 @@ class _GlassFishButtonState extends State<GlassFishButton> {
         child: Material(
           type: MaterialType.transparency,
           child: InkWell(
+
             onTap: enabled ? widget.onPressed : null,
             onHighlightChanged: enabled ? _handleHighlightChanged : null,
             borderRadius: borderRadius,
-            splashColor: Colors.white.withOpacity(
-              widget.brightness == GlassFishButtonBrightness.light ? 0.08 : 0.06,
+            splashColor: Colors.white.withAlpha(
+              (widget.brightness == GlassFishButtonBrightness.light ? 20 :16),
             ),
-            highlightColor: Colors.white.withOpacity(
-              widget.brightness == GlassFishButtonBrightness.light ? 0.06 : 0.04,
+            highlightColor: Colors.white.withAlpha(
+              (widget.brightness == GlassFishButtonBrightness.light ? 16 : 10),
             ),
             child: Ink(
               decoration: BoxDecoration(
@@ -198,6 +199,7 @@ class _GlassFishButtonState extends State<GlassFishButton> {
               child: Container(
                 padding: resolvedPadding,
                 alignment: Alignment.center,
+
                 child: ClipRRect(
                   borderRadius: borderRadius,
                   clipBehavior: Clip.antiAlias,
